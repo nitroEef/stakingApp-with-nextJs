@@ -3,6 +3,7 @@ import StakedAmount from './StakedAmount'
 import RewardRate from './RewardRate'
 import EarnedReward from './EarnedReward'
 import StakeToken from '../stakeToken/StakeToken'
+import TokenApproval from '../stakeToken/TokenApproval'
 
 const DisplayPanel = () => {
   return (
@@ -26,6 +27,7 @@ const DisplayPanel = () => {
 
     <div>
       <StakeToken/>
+      <TokenApproval/>
     </div>
    </div>
   )
