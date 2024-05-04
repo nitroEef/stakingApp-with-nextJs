@@ -12,7 +12,7 @@ const Approval = () => {
     }
   return (
     <div>
-      <h1 onClick={handleToast}>Approval</h1>
+      <h1 onClick={handleToast}>Token Approval</h1>
     </div>
   )
 }
