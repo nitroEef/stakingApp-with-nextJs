@@ -4,6 +4,8 @@ import RewardRate from './RewardRate'
 import EarnedReward from './EarnedReward'
 import StakeToken from '../stakeToken/StakeToken'
 import TokenApproval from '../stakeToken/TokenApproval'
+import Stake from '../Stake/Stake'
+import Approval from '../Stake/Approval'
 
 const DisplayPanel = () => {
   return (
@@ -25,9 +27,14 @@ const DisplayPanel = () => {
 <EarnedReward/>
     </div>
 
-    <div>
+    <div className='flex justify-around mt-20'>
       <StakeToken/>
       <TokenApproval/>
+    </div>
+
+    <div>
+      <Stake/>
+      <Approval/>
     </div>
    </div>
   )
