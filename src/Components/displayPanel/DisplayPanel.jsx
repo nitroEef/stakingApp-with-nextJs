@@ -2,6 +2,7 @@ import React from 'react'
 import StakedAmount from './StakedAmount'
 import RewardRate from './RewardRate'
 import EarnedReward from './EarnedReward'
+import StakeToken from '../stakeToken/StakeToken'
 
 const DisplayPanel = () => {
   return (
@@ -21,6 +22,10 @@ const DisplayPanel = () => {
 <StakedAmount/>
 <RewardRate/>
 <EarnedReward/>
+    </div>
+
+    <div>
+      <StakeToken/>
     </div>
    </div>
   )
