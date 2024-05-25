@@ -39,11 +39,18 @@ contract Staking is ReentrancyGuard {
 
     }
 
-    function earned (address account) public view returns(uint) {
-        return stakedBalance[account] * (rewardPerToken() -userRewardPerTokenPaid[account] +rewards[account])
+    function earned(address account) public view returns(uint) {
+        return stakedBalance[account] * (rewardPerToken() -userRewardPerTokenPaid[account] + rewards[account]);
     }
-    modifier updatereward (address account){
-        rewardPerTokenStored =
+
+    modifier updateReward(address account) {
+        rewardPerTokenStored = rewardPerToken();
+        lastUpdateTime = block.timestamp;
+        rewards[account] = earned(account);
+        userRewardPerTokenPaid[account] = rewardPerTokenStored;
+        _;
     }
+
+    function stake(uint amount) external updateReward(account)
 
 }
