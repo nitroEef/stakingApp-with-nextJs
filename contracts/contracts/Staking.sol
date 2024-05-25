@@ -17,7 +17,14 @@ contract Staking is ReentrancyGuard {
 
     mapping (address=>uint) public stakedBalance;
     mapping (address=>uint) public rewards;
-    mapping (address=>uint) public userRewardPerTokenPaid
+    mapping (address=>uint) public userRewardPerTokenPaid;
+
+    event Staked (address indexed user, uint256 indexed amount);
+    event Withdrawn (address indexed user, uint256 indexed amount);
+    event RewardsClaimed (address indexed user, uint256 indexed amount);
+
+
+    event Staked (adress indexed user, uint256 indexed amount);
 
 
 
