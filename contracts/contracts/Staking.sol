@@ -39,6 +39,8 @@ contract Staking is ReentrancyGuard {
 
     }
 
-    function earned (address account) public view
+    function earned (address account) public view returns(uint) {
+        return stakedBalance
+    }
 
 }
