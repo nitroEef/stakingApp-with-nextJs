@@ -63,5 +63,11 @@ contract Staking is ReentrancyGuard {
 
     function getreward() external nonReentrant updateReward (msg.sender) {
         unit reward = rewards [msg.sender];
-        require(reward>=0, "no reward to claim")
+        require(reward>=0, "no reward to claim");
+        rewards[msg.sender] = 0;
+
+        emit RewardsClaimed(msg.sender, reward)
+
+        bool success= s_rewardToken.transfer(msg.sender, reward);
+        require(success, "transfer failed")
     }
