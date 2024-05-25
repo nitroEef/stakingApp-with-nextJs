@@ -71,3 +71,4 @@ contract Staking is ReentrancyGuard {
         bool success= s_rewardToken.transfer(msg.sender, reward);
         require(success, "transfer failed")
     }
+}
