@@ -39,4 +39,6 @@ contract Staking is ReentrancyGuard {
 
     }
 
+    function earned (address account) public view
+
 }
