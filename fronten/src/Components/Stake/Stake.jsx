@@ -10,7 +10,7 @@ const Stake = () => {
     }
   return (
     <div>
-      <h1 onClick={handleToast}> Stake </h1>
+      <h1 className='font-semibold cursor-pointer ' onClick={handleToast}> Stake </h1>
       <Toaster/>
     </div>
   )

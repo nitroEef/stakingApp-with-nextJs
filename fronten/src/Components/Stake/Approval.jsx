@@ -12,7 +12,7 @@ const Approval = () => {
     }
   return (
     <div>
-      <h1 onClick={handleToast}>Token Approval</h1>
+      <h1  className='font-semibold cursor-pointer 'onClick={handleToast}>Token Approval</h1>
     </div>
   )
 }

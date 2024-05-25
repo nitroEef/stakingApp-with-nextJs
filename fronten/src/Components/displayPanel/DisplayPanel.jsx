@@ -7,6 +7,7 @@ import TokenApproval from '../stakeToken/TokenApproval'
 import Stake from '../Stake/Stake'
 import Approval from '../Stake/Approval'
 import Withdraw from '../Withdraw/Withdraw'
+import Footer from '../footer/Footer'
 
 const DisplayPanel = () => {
   return (
@@ -38,9 +39,13 @@ const DisplayPanel = () => {
       <Approval/>
     </div>
 
-    
-    <div>
+
+    <div className='ml-80 mt-20'>
       <Withdraw/>
+    </div>
+
+    <div>
+      <Footer/>
     </div>
    </div>
   )
